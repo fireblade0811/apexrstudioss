@@ -1,0 +1,48 @@
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stumps Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="button.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="upper-content">
+        <button class="back-button" onclick="window.location.href='https://stunning-palm-tree-pj6545rj74p5f75vg-3000.app.github.dev/index.html'">Back</button>
+        <h1 class="allign-center underline">Test Item One</h1>
+          <div style="width: 64px;"></div>
+    </div>
+    <div class="page-container">
+        <button class="checkout-button buy-button">Purchase Item</button>
+    </div>
+    <img src="https://stunning-palm-tree-pj6545rj74p5f75vg-3000.app.github.dev/images/test.png" alt="Test Item One Image" class="item-image">
+    <h2 class="allign-center">This Item was made to be a test of my skillz</h2>
+</body>
+
+  <script>
+    const priceMap = [
+      'price_1RjszvIH7XWPimYMz2aq2WYm'
+    ];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.checkout-button');
+      buttons.forEach((button, index) => {
+        button.addEventListener('click', async () => {
+          const priceId = priceMap[index];
+          try {
+            const res = await fetch('/create-checkout-session', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ priceId })
+            });
+            const data = await res.json();
+            window.location = data.url;
+          } catch (err) {
+            console.error('Error creating checkout session:', err);
+          }
+        });
+      });
+    });
+    </script>

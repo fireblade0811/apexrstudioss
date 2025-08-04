@@ -1,0 +1,92 @@
+body {
+  background-color: #303030ff;
+}
+
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #1a1a1aff;
+  color: white;
+  padding: 20px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.upper-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  color : white;
+  font-size: 2rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+}
+
+
+.item-image {
+  display: block;
+  margin: auto;
+  margin-top: 100px;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.title {
+  text-decoration: underline;
+  margin-top: 20px;
+  margin-left: 20px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+  font-size: 2rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+.Upper-text {
+  text-decoration: underline;
+  text-align: center;
+  opacity: 0;
+  margin-top: 5px;
+  animation: fadeIn 2s ease-in forwards;
+  font-size: 3.5rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+.allign-center {
+  text-align: center;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-left: 20px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+  font-size: 1.5rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
