@@ -18,8 +18,8 @@ app.post('/create-checkout-session', async (req, res) => {
         price: priceId,
         quantity: 1,
       }],
-        success_url: 'https://stunning-palm-tree-pj6545rj74p5f75vg-3000.app.github.dev/success.html',
-        cancel_url: 'https://stunning-palm-tree-pj6545rj74p5f75vg-3000.app.github.dev/index.html',
+        success_url: 'success.html',
+        cancel_url: 'index.html',
     });
 
     res.json({ url: session.url });
